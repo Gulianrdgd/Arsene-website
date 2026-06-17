@@ -15,10 +15,10 @@
 </script>
 
 <svelte:head>
-	<title>Arsene — Software op jouw voorwaarden</title>
+	<title>arsene — digitale infrastructuur die écht werkt</title>
 	<meta
 		name="description"
-		content="Arsene bouwt digitale infrastructuur voor het MKB die je daarna zélf kunt beheren. Geen lock-in, geen onzin."
+		content="Ik koppel je oude websites en systemen, automatiseer het handwerk en maak je bedrijf AI-ready — zo gebouwd dat je het zelf kunt beheren. Geen lock-in, geen onzin."
 	/>
 </svelte:head>
 

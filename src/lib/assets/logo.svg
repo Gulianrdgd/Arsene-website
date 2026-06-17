@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="150 860 1760 400">
+  <defs>
+    <style>
+      .b {
+        fill: #00b585;
+      }
+
+      .c {
+        letter-spacing: -.08em;
+      }
+
+      .d {
+        letter-spacing: -.05em;
+      }
+
+      .e {
+        letter-spacing: -.05em;
+      }
+
+      .f {
+        letter-spacing: -.04em;
+      }
+
+      .g {
+        letter-spacing: -.04em;
+      }
+
+      .h {
+        font-family: Geist-SemiBold, Geist;
+        font-size: 522.14px;
+        font-variation-settings: 'wght' 600;
+        font-weight: 600;
+      }
+    </style>
+  </defs>
+  <text class="h" transform="translate(179.67 1184.55)"><tspan class="f" x="0" y="0">a</tspan><tspan class="c" x="280.9" y="0">r</tspan><tspan class="e" x="452.69" y="0">se</tspan><tspan class="d" x="997.79" y="0">n</tspan><tspan class="g" x="1283.93" y="0">e</tspan></text>
+  <circle class="b" cx="1822.65" cy="1148.95" r="45.69"/>
+</svg>

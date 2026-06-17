@@ -18,15 +18,15 @@
 </script>
 
 <section id="contact" class="mx-auto max-w-[1100px] px-10 py-18">
-	<div class="grid grid-cols-1 items-start gap-14 md:grid-cols-2">
+	<div class="grid grid-cols-1 items-start gap-14 md:grid-cols-2 py-12">
 		<div>
-			<Eyebrow num="03">Contact</Eyebrow>
+			<Eyebrow num="02">Contact</Eyebrow>
 			<h2 class="mt-3 max-w-[14ch] font-sans text-[40px] font-bold tracking-[-0.045em] text-ink">
 				Begin een gesprek.
 			</h2>
 			<p class="mt-5 max-w-[40ch] font-sans text-[16px] leading-[1.55] text-warm-800">
-				Vertel kort wat er speelt. We mailen binnen een werkdag terug — geen salesfunnel, gewoon een
-				mens.
+				Ik ben altijd in voor een goed gesprek, geheel vrijblijvend. Vul het formulier in of mail me
+				direct.
 			</p>
 			<div class="mt-7 font-mono text-[13px] tracking-[0.04em] text-mint-deep">
 				info@arsene.nl · +31 6 12 34 56 78
@@ -39,9 +39,9 @@
 						— Verstuurd
 					</span>
 					<h3 class="m-0 font-sans text-[24px] font-bold tracking-[-0.03em] text-ink">
-						Dank — we mailen je snel.
+						Dank — ik mail je snel.
 					</h3>
-					<p class="m-0 font-sans text-[14px] text-warm-800">Binnen een werkdag hoor je van ons.</p>
+					<p class="m-0 font-sans text-[14px] text-warm-800">Binnen een werkdag hoor je van mij.</p>
 				</div>
 			{:else}
 				<form onsubmit={handleSubmit} class="flex flex-col gap-4">
