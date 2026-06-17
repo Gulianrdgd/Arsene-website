@@ -1,0 +1,190 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn-svelte/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* ============================================================
+   FONTS — Geist & Geist Mono, the real Arsene brand fonts,
+   self-hosted from the studio's official variable .ttf files.
+   Variable weight axis 100–900.
+   ============================================================ */
+@font-face {
+	font-family: 'Geist';
+	src: url('/fonts/Geist-Variable.ttf') format('truetype-variations');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Geist Mono';
+	src: url('/fonts/GeistMono-Variable.ttf') format('truetype-variations');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ============================================================
+   ARSENE TOKENS — the house style. Three colour families:
+   Anchor (paper & ink), Depth (teal), Signal (mint & red).
+   Near-square corners, hairline borders, quiet ease-out motion.
+   ============================================================ */
+:root {
+	/* — Anchor · paper & ink — */
+	--paper: #f4f1e8;
+	--paper-2: #ebe7d8;
+	--surface: #ffffff;
+	--warm-300: #e0dcc9;
+	--warm-400: #d8d3c2;
+	--warm-500: #c1bba5;
+	--warm-600: #918c7e;
+	--warm-800: #4d4a41;
+	--ink: #14120f;
+
+	/* — Depth · teal — */
+	--teal-deep: #06120f;
+	--teal-card: #0a1a17;
+	--teal-fg: #d9e8e4;
+
+	/* — Signal · mint & red — */
+	--mint: #00b585;
+	--mint-2: #00d49c;
+	--mint-bright: #2ee5ac;
+	--mint-deep: #007f5f;
+	--signal: #d83a20;
+
+	/* — Motion — quiet and quick, no bounce — */
+	--ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+	--dur-fast: 120ms;
+	--dur-base: 200ms;
+	--dur-slow: 320ms;
+
+	/* — shadcn semantic vars mapped onto the Arsene palette,
+	     so the installed primitives inherit the brand. — */
+	--radius: 0.375rem; /* 6px — Arsene's default near-square corner */
+
+	--background: var(--paper);
+	--foreground: var(--ink);
+	--card: var(--surface);
+	--card-foreground: var(--ink);
+	--popover: var(--surface);
+	--popover-foreground: var(--ink);
+	--primary: var(--teal-deep);
+	--primary-foreground: var(--teal-fg);
+	--secondary: var(--paper-2);
+	--secondary-foreground: var(--ink);
+	--muted: var(--paper-2);
+	--muted-foreground: var(--warm-600);
+	--accent: var(--paper-2);
+	--accent-foreground: var(--ink);
+	--destructive: var(--signal);
+	--destructive-foreground: var(--surface);
+	--border: var(--warm-400);
+	--input: var(--warm-400);
+	--ring: var(--ink);
+
+	--sidebar: var(--paper);
+	--sidebar-foreground: var(--ink);
+	--sidebar-primary: var(--teal-deep);
+	--sidebar-primary-foreground: var(--teal-fg);
+	--sidebar-accent: var(--paper-2);
+	--sidebar-accent-foreground: var(--ink);
+	--sidebar-border: var(--warm-400);
+	--sidebar-ring: var(--ink);
+}
+
+@theme inline {
+	/* Families */
+	--font-sans: 'Geist', system-ui, -apple-system, sans-serif;
+	--font-mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+	/* Arsene palette as Tailwind colour utilities
+	   (bg-paper, text-ink, bg-teal-deep, text-mint, …) */
+	--color-paper: var(--paper);
+	--color-paper-2: var(--paper-2);
+	--color-surface: var(--surface);
+	--color-warm-300: var(--warm-300);
+	--color-warm-400: var(--warm-400);
+	--color-warm-500: var(--warm-500);
+	--color-warm-600: var(--warm-600);
+	--color-warm-800: var(--warm-800);
+	--color-ink: var(--ink);
+	--color-teal-deep: var(--teal-deep);
+	--color-teal-card: var(--teal-card);
+	--color-teal-fg: var(--teal-fg);
+	--color-mint: var(--mint);
+	--color-mint-2: var(--mint-2);
+	--color-mint-bright: var(--mint-bright);
+	--color-mint-deep: var(--mint-deep);
+	--color-signal: var(--signal);
+
+	/* shadcn semantic colours */
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--color-sidebar: var(--sidebar);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
+
+	/* Radii — strict, near-square. 6px default; chips 2px. */
+	--radius-xs: 2px;
+	--radius-sm: calc(var(--radius) - 2px); /* 4px */
+	--radius-md: calc(var(--radius) - 1px); /* 5px */
+	--radius-lg: var(--radius); /* 6px */
+	--radius-xl: 10px;
+	--radius-2xl: 16px;
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+	body {
+		@apply bg-background text-foreground;
+		font-feature-settings:
+			'cv01' on,
+			'ss01' on;
+	}
+	html {
+		@apply font-sans;
+	}
+}
+
+@layer utilities {
+	/* The marker — a highlighter band (Mint Bright) behind one or two
+	   words of a headline. Fills roughly the lower 36% of the line,
+	   bottom-aligned. Never a whole sentence. */
+	.marker {
+		background: linear-gradient(
+			180deg,
+			transparent 56%,
+			var(--mint-bright) 56%,
+			var(--mint-bright) 92%,
+			transparent 92%
+		);
+		padding: 0 0.25rem;
+	}
+}
