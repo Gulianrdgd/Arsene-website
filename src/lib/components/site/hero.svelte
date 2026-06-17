@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Eyebrow from '$lib/components/brand/eyebrow.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import portrait from '$lib/assets/julian-hero.png';
 
