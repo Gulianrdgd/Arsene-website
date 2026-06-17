@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Header from '$lib/components/site/header.svelte';
 	import Hero from '$lib/components/site/hero.svelte';
-	import Work from '$lib/components/site/work.svelte';
 	import Approach from '$lib/components/site/approach.svelte';
 	import Contact from '$lib/components/site/contact.svelte';
 	import Footer from '$lib/components/site/footer.svelte';
@@ -26,7 +25,6 @@
 <Header onContact={goContact} />
 <main>
 	<Hero onContact={goContact} />
-	<Work />
 	<Approach />
 	<Contact />
 </main>

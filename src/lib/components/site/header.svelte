@@ -6,7 +6,7 @@
 	let { onContact }: { onContact?: () => void } = $props();
 
 	let scrolled = $state(false);
-	const links = ['Werk', 'Aanpak', 'Over'];
+	const links = [ 'Aanpak', 'Over'];
 
 	onMount(() => {
 		const onScroll = () => (scrolled = window.scrollY > 12);
