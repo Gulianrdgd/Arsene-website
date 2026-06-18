@@ -14,6 +14,8 @@
 			</a>
 			<span class="px-1.5 text-mint-bright">·</span>
 			Nijmegen, NL
+			<span class="px-1.5 text-mint-bright">·</span>
+			KVK 42087289
 		</div>
 	</div>
 </footer>

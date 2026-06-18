@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    networks:
+      - pangolin_proxy
+
+networks:
+  pangolin_proxy:
+    external: true

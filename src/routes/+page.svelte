@@ -4,14 +4,6 @@
 	import Approach from '$lib/components/site/approach.svelte';
 	import Contact from '$lib/components/site/contact.svelte';
 	import Footer from '$lib/components/site/footer.svelte';
-
-	function goContact() {
-		const el = document.querySelector('#contact');
-		if (el) {
-			const top = el.getBoundingClientRect().top + window.scrollY - 60;
-			window.scrollTo({ top, behavior: 'smooth' });
-		}
-	}
 </script>
 
 <svelte:head>
@@ -40,20 +32,9 @@
 		content="Ik denk graag mee over digitale infrastructuur die écht werkt. Van websites tot AI-oplossingen."
 	/>
 
-	{@html `<script type="application/ld+json">${JSON.stringify({
-		"@context": "https://schema.org",
-		"@type": "ProfessionalService",
-		"name": "arsene",
-		"url": "https://arsene.nl",
-		"email": "info@arsene.nl",
-		"description": "Digitale infrastructuur, systeemintegratie en AI-advies voor bedrijven.",
-		"founder": { "@type": "Person", "name": "Julian van der Horst" },
-		"address": { "@type": "PostalAddress", "addressLocality": "Nijmegen", "addressCountry": "NL" },
-		"areaServed": "NL"
-	})}</script>`}
 </svelte:head>
 
-<Header onContact={goContact} />
+<Header />
 <main>
 	<Hero />
 	<Approach />
