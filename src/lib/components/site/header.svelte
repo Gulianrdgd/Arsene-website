@@ -23,21 +23,21 @@
 </script>
 
 <header
-	class="sticky top-0 z-20 flex items-center justify-between px-10 py-4 transition-[background-color,border-color] duration-200 ease-[var(--ease-out)]"
+	class="sticky top-0 z-20 flex items-center justify-between px-10 py-4 transition-[background-color,border-color] duration-200 ease-out"
 	style={headerStyle}
 >
 	<a href="#top" class="transition-opacity hover:opacity-70" aria-label="arsene — naar boven">
-		<img src={logo} alt="arsene" width="104" height="26" class="h-[26px] w-auto select-none" />
+		<img src={logo} alt="arsene" width="104" height="26" class="h-6.5 w-auto select-none" />
 	</a>
 	<nav class="flex items-center gap-7">
 		{#each links as link (link.href)}
 			<a
 				href={link.href}
-				class="font-mono text-[11px] uppercase tracking-[0.14em] text-warm-800 no-underline transition-opacity hover:opacity-70"
+				class="font-mono text-[11px] uppercase tracking-[0.14em] text-warm-800 no-underline transition-opacity hover:opacity-70 not-sm:hidden"
 			>
 				{link.label}
 			</a>
 		{/each}
-		<Button size="sm" arrow onclick={onContact}>Begin een gesprek</Button>
+		<Button size="sm" arrow onclick={onContact}>Neem contact op</Button>
 	</nav>
 </header>

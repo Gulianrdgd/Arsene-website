@@ -18,13 +18,44 @@
 	<title>arsene — digitale infrastructuur die écht werkt</title>
 	<meta
 		name="description"
-		content="Ik koppel je oude websites en systemen, automatiseer het handwerk en maak je bedrijf AI-ready — zo gebouwd dat je het zelf kunt beheren. Geen lock-in, geen onzin."
+		content="Ik denk graag mee over digitale infrastructuur die écht werkt. Van websites tot AI-oplossingen."
 	/>
+	<meta name="author" content="Julian van der Horst" />
+	<link rel="canonical" href="https://arsene.nl/" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://arsene.nl/" />
+	<meta property="og:locale" content="nl_NL" />
+	<meta property="og:site_name" content="arsene" />
+	<meta property="og:title" content="arsene — digitale infrastructuur die écht werkt" />
+	<meta
+		property="og:description"
+		content="Ik denk graag mee over digitale infrastructuur die écht werkt. Van websites tot AI-oplossingen."
+	/>
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="arsene — digitale infrastructuur die écht werkt" />
+	<meta
+		name="twitter:description"
+		content="Ik denk graag mee over digitale infrastructuur die écht werkt. Van websites tot AI-oplossingen."
+	/>
+
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "ProfessionalService",
+		"name": "arsene",
+		"url": "https://arsene.nl",
+		"email": "info@arsene.nl",
+		"description": "Digitale infrastructuur, systeemintegratie en AI-advies voor bedrijven.",
+		"founder": { "@type": "Person", "name": "Julian van der Horst" },
+		"address": { "@type": "PostalAddress", "addressLocality": "Nijmegen", "addressCountry": "NL" },
+		"areaServed": "NL"
+	})}</script>`}
 </svelte:head>
 
 <Header onContact={goContact} />
 <main>
-	<Hero onContact={goContact} />
+	<Hero />
 	<Approach />
 	<Contact />
 </main>

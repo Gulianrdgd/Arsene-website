@@ -21,14 +21,14 @@
 </script>
 
 <section id="help" class="bg-teal-deep px-10 py-18">
-	<div class="mx-auto max-w-[1100px] py-12">
+	<div class="mx-auto max-w-275 py-12">
 		<Eyebrow num="01" tone="dark">Zo help ik</Eyebrow>
 		<h2 class="mt-3 max-w-[18ch] font-sans text-[40px] font-bold tracking-[-0.045em] text-teal-fg">
 			Van vastzitten naar vooruit.
 		</h2>
 		<div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
 			{#each steps as s (s.n)}
-				<div class="border-t border-[rgba(217,232,228,0.18)] pt-[18px]">
+				<div class="border-t border-[rgba(217,232,228,0.18)] pt-4.5">
 					<div class="mb-3 font-mono text-[13px] tracking-[0.08em] text-mint-bright">{s.n}</div>
 					<h3 class="mb-2 font-sans text-[20px] font-semibold tracking-[-0.02em] text-teal-fg">
 						{s.t}

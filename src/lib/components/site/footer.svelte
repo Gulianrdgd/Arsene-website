@@ -3,8 +3,8 @@
 </script>
 
 <footer class="bg-teal-deep px-10 py-6">
-	<div class="mx-auto flex max-w-[1100px] flex-col items-center justify-between gap-4 sm:flex-row">
-		<img src={logoDark} alt="arsene" width="124" height="28" class="h-[26px] w-auto select-none" />
+	<div class="mx-auto flex max-w-275 flex-col items-center justify-between gap-4 sm:flex-row">
+		<img src={logoDark} alt="arsene" width="124" height="28" class="h-6.5 w-auto select-none" />
 		<div class="font-mono text-[12px] tracking-[0.06em] text-[rgba(217,232,228,0.55)]">
 			<a
 				href="mailto:info@arsene.nl"
